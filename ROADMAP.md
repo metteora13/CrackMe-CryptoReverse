@@ -6,7 +6,7 @@ Bu yol haritası, CrackMe-CryptoReverse uygulamasının mevcut durumunu ve gelec
  **Önemli Uyarı: Bu bilgiler yalnızca eğitim ve araştırma amaçlıdır. Yetkisiz kullanımı yasa dışı ve etik dışıdır. Herhangi bir ağda veya sistemde test yapmadan önce açık izin almanız zorunludur.**
 
  
-🎯 ## PROJE VİZYONU / Project Vision
+## 🎯  PROJE VİZYONU / Project Vision
 CrackMe-CryptoReverse'in nihai hedefi, tersine mühendislik ve kriptografi alanında yeni başlayanlardan ileri seviye kullanıcılara kadar herkes için kapsamlı, etkileşimli ve ilham verici bir öğrenme platformu olmaktır. Uygulamanın temel amacı, kullanıcıları problem çözme, analitik düşünme ve siber güvenlik araçlarını etkin kullanma konularında teşvik etmektir.
 
 ## ÖN KOŞULLAR
@@ -32,7 +32,7 @@ Online kriptografi çözücüler (örneğin XOR, Sezar)
 Hex editörler
 
 
-✅ ## MEVCUT SEVİYELER VE HEDEFLER (v1.0) / Current Levels & Objectives
+## ✅  MEVCUT SEVİYELER VE HEDEFLER (v1.0) / Current Levels & Objectives
 Uygulamanın mevcut sürümünde (v1.0) bulunan seviyeler ve her birindeki temel tersine mühendislik hedefleri:
 
 **Seviye 1**: Ters Çevirme (Reverse String)
@@ -54,7 +54,7 @@ Hedef: Programın içerisinde basit matematiksel işlemlerin nasıl saklandığ�
 **Hedef**: Kod gizleme tekniklerine ilk bakış. Uygulamanın mantığını takip ederek veya hata ayıklayıcı kullanarak doğru değeri dinamik olarak bulma.
 
 
-🗺️ ## YOL HARİTASI (Gelecek Geliştirmeler) / Roadmap (Future Developments)
+## 🗺️  YOL HARİTASI (Gelecek Geliştirmeler) / Roadmap (Future Developments)
 **Faz 1**: Kriptografik Zenginleştirme (Hedef: v1.1)
 Yeni Şifreleme Algoritmaları:
 **Base64/ROT13**: Daha sık karşılaşılan kodlama/basit şifreleme yöntemlerini ekleme.
@@ -74,7 +74,7 @@ Bitwise Operasyonlar: Şifrelemelerde sıkça kullanılan bitwise (AND, OR, NOT,
 **Test Otomasyonu**: Her seviyenin doğru çalışıp çalışmadığını kontrol etmek için otomatik testler geliştirme.
 **Daha İyi Cross-Platform Uyumluluğu**: MacOS ve Linux'ta da daha sorunsuz çalışmasını sağlama.
 
-📈## GELİŞTİRMELERİN TEST EDİLMESİ / Testing Developments
+## 📈 GELİŞTİRMELERİN TEST EDİLMESİ / Testing Developments
 Her yeni seviye ve özellik eklendiğinde, aşağıdaki test adımları uygulanacaktır:
 
 **Manuel Testler**: Uygulama, her seviye için belirlenmiş doğru şifrelerle manuel olarak test edilecektir.
@@ -84,10 +84,10 @@ Ghidra/IDA Free ile statik kod analizi yaparak fonksiyon akışlarını ve veri 
 x64dbg gibi bir debugger ile dinamik analiz yaparak çalışma zamanı davranışını izleme.
 **Hata Yakalama**: Potansiyel hataları ve güvenlik açıklarını belirlemek için çeşitli yanlış girişler denenecektir.
 
-🛡️ ## GÜVENLİK VE ETİK İLKELER / Security & Ethical Guidelines
+## 🛡️  GÜVENLİK VE ETİK İLKELER / Security & Ethical Guidelines
 **Eğitim Amacı**: Projenin tek amacı, siber güvenlik becerilerini etik ve yasal sınırlar içinde geliştirmektir.
 **İzinli Kullanım**: Bu projede öğrenilen hiçbir teknik, yazılı izin alınmadan gerçek sistemlere veya ağlara karşı kullanılmamalıdır.
 **Sorumluluk**: Kullanıcılar, bu araçları ve bilgileri kullanırken kendi eylemlerinden tamamen sorumludur.
 
-🏁 ## SONUÇ/ Conclusion
+## 🏁  SONUÇ/ Conclusion
 Bu yol haritası, CrackMe-CryptoReverse'in heyecan verici gelişim potansiyelini ortaya koymaktadır. Topluluktan gelecek geri bildirimler ve katkılarla projenin daha da zenginleşeceğine inanıyoruz. Siber güvenlik dünyasında yeteneklerinizi test etmek ve geliştirmek için bize katılın!
