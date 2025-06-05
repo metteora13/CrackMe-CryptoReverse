@@ -21,15 +21,15 @@ This is precisely where your reverse engineering prowess comes into play. Your m
 ##✨ **Features / Özellikler**
 Sizi hem eğlendirecek hem de öğretecek dikkat çekici özellikler:
 
-🔒 Çok Seviyeli Kripto Gizemleri (Multi-Level Crypto Puzzles): Basitten karmaşığa doğru ilerleyen 6 farklı şifreleme algoritmasıyla karşılaşın. Her seviye, farklı bir kriptografik bulmacayı çözmenizi gerektirecek. (Ters Çevirme, XOR, Sezar Şifrelemesi, MD5 Hash, Matematiksel Hesaplama, Karmaşık Kontrol Akışı gibi!)
+🔒 **Çok Seviyeli Kripto Gizemleri (Multi-Level Crypto Puzzles)**: Basitten karmaşığa doğru ilerleyen 6 farklı şifreleme algoritmasıyla karşılaşın. Her seviye, farklı bir kriptografik bulmacayı çözmenizi gerektirecek. (Ters Çevirme, XOR, Sezar Şifrelemesi, MD5 Hash, Matematiksel Hesaplama, Karmaşık Kontrol Akışı gibi!)
 
-🧠 Tersine Mühendislik Laboratuvarı (Reverse Engineering Sandbox): Bu uygulama, strings, disassembler'lar (Ghidra, IDA Free) ve debugger'lar (x64dbg) gibi araçların nasıl kullanılacağını pratik bir şekilde öğrenmek için mükemmel bir ortam sunar. Kodun iç yüzünü keşfetmeye odaklanın!
+🧠 **Tersine Mühendislik Laboratuvarı (Reverse Engineering Sandbox)**: Bu uygulama, strings, disassembler'lar (Ghidra, IDA Free) ve debugger'lar (x64dbg) gibi araçların nasıl kullanılacağını pratik bir şekilde öğrenmek için mükemmel bir ortam sunar. Kodun iç yüzünü keşfetmeye odaklanın!
 
-🎓 Eğitimsel ve Öğretici Tasarım (Educational & Instructive Design): CrackMe, siber güvenlik ve kriptografi alanındaki temel kavramları yeni başlayanlar için anlaşılır ve ilgi çekici bir platformda sunar. Karmaşık algoritmaların ardındaki mantığı çözerek hem bilgi hem de beceri kazanın.
+🎓 **Eğitimsel ve Öğretici Tasarım (Educational & Instructive Design)**: CrackMe, siber güvenlik ve kriptografi alanındaki temel kavramları yeni başlayanlar için anlaşılır ve ilgi çekici bir platformda sunar. Karmaşık algoritmaların ardındaki mantığı çözerek hem bilgi hem de beceri kazanın.
 
-🔄 Esnek Analiz Desteği (Flexible Analysis Support): Statik kod analizi (kodun kaynak dosyasına veya ikili dosya yapısına bakma) veya dinamik analiz (programı çalıştırırken hata ayıklama ve bellek durumunu izleme) gibi çeşitli tersine mühendislik yaklaşımlarını deneme özgürlüğüne sahipsiniz. Size uygun yöntemi seçin!
+🔄 **Esnek Analiz Desteği (Flexible Analysis Support)**: Statik kod analizi (kodun kaynak dosyasına veya ikili dosya yapısına bakma) veya dinamik analiz (programı çalıştırırken hata ayıklama ve bellek durumunu izleme) gibi çeşitli tersine mühendislik yaklaşımlarını deneme özgürlüğüne sahipsiniz. Size uygun yöntemi seçin!
 
-🚀 İlerlemeyi Kaydetme (Progress Saving): Çözdüğünüz seviyeler otomatik olarak kaydedilir, böylece kaldığınız yerden devam edebilirsiniz. Her seferinde baştan başlamak zorunda kalmazsınız.
+🚀 **İlerlemeyi Kaydetme (Progress Saving)**: Çözdüğünüz seviyeler otomatik olarak kaydedilir, böylece kaldığınız yerden devam edebilirsiniz. Her seferinde baştan başlamak zorunda kalmazsınız.
 ---
 
 ## Team / *Ekip*
@@ -82,23 +82,23 @@ Harika! Usage (Kullanım) bölümünü projenizin CrackMe yapısına uygun hale 
 
 İşte size özel olarak hazırlanmış, güncellenmiş "Usage" bölümü:
 
-🎮 Usage / Kullanım
+🎮 **Usage / Kullanım**
 Hazır mısınız? Bu gizemli uygulamanın sırlarını çözmek için aşağıdaki adımları izleyin:
 
-Projeyi başlatın:
+**Projeyi başlatın**:
 
-Bash
+**Bash**
 python main.py
 
-Adımlar:
+**Adımlar**:
 
-Uygulamayı Başlatın: Terminalinizde yukarıdaki komutu çalıştırın. Kısa bir süre sonra, Python Tkinter tabanlı şık bir grafik arayüzle karşılaşacaksınız. Bu, şifre avınızın başlangıç noktası olacak!
+**Uygulamayı Başlatın**: Terminalinizde yukarıdaki komutu çalıştırın. Kısa bir süre sonra, Python Tkinter tabanlı şık bir grafik arayüzle karşılaşacaksınız. Bu, şifre avınızın başlangıç noktası olacak!
 
-Gizli Şifreyi Çözün: Uygulamanın ana ekranında "Çözülmesi Gereken" başlığı altında size verilen şifreli metni dikkatlice inceleyin. Aynı zamanda, "Algoritma" ve "Nasıl Çözülür" kısımlarındaki ipuçları ve detaylı rehber metinleri size yol gösterecek. Bu bilgiler, hangi kriptografik yöntemin kullanıldığını ve şifreyi nasıl deşifre etmeniz gerektiğini anlamanız için kritik. Gerekirse harici tersine mühendislik araçlarını kullanmaktan çekinmeyin!
+**Gizli Şifreyi Çözün**: Uygulamanın ana ekranında "Çözülmesi Gereken" başlığı altında size verilen şifreli metni dikkatlice inceleyin. Aynı zamanda, "Algoritma" ve "Nasıl Çözülür" kısımlarındaki ipuçları ve detaylı rehber metinleri size yol gösterecek. Bu bilgiler, hangi kriptografik yöntemin kullanıldığını ve şifreyi nasıl deşifre etmeniz gerektiğini anlamanız için kritik. Gerekirse harici tersine mühendislik araçlarını kullanmaktan çekinmeyin!
 
-Çözümü Girin: Şifreli metnin ardındaki gerçek kelimeyi bulduğunuzda, bunu "Çözülmüş Şifreyi Girin" kutusuna yazın. Doğrulamak için klavyenizdeki Enter tuşuna basın veya "ÇÖZÜMÜ KONTROL ET" butonuna tıklayın.
+**Çözümü Girin**: Şifreli metnin ardındaki gerçek kelimeyi bulduğunuzda, bunu "Çözülmüş Şifreyi Girin" kutusuna yazın. Doğrulamak için klavyenizdeki Enter tuşuna basın veya "ÇÖZÜMÜ KONTROL ET" butonuna tıklayın.
 
-İlerlemenizi İzleyin: Eğer çözümünüz doğruysa, "BAŞARILI!" mesajını görecek ve bir sonraki zorlu seviyeye geçeceksiniz. Tüm 6 seviyeyi başarıyla tamamlayarak R.E.M.I.X. görevinizi bitirin ve siber güvenlik alanındaki ustalığınızı kanıtlayın!
+**İlerlemenizi İzleyin**: Eğer çözümünüz doğruysa, "BAŞARILI!" mesajını görecek ve bir sonraki zorlu seviyeye geçeceksiniz. Tüm 6 seviyeyi başarıyla tamamlayarak R.E.M.I.X. görevinizi bitirin ve siber güvenlik alanındaki ustalığınızı kanıtlayın!
 
 ## Contributing / *Katkıda Bulunma*
 
