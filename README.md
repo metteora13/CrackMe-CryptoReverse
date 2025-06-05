@@ -20,21 +20,25 @@
 
 *Feature 1*: XOR Encryption
 The password is concealed using an XOR operation, requiring users to understand XOR logic to decipher it.
+
 *Özellik 1*: XOR Şifreleme
 Şifre, XOR işlemiyle gizlenmiş olup, kullanıcıların bu kriptografik yöntemi analiz ederek şifreyi ortaya çıkarmasını sağlar.
 
 *Feature 2*: Reverse Engineering Focused
 The application encourages users to analyze the binary file to find the password, offering an opportunity to learn the use of reverse engineering tools.
+
 *Özellik 2*: Tersine Mühendislik Odaklı
 Kullanıcılar, disassembler veya debugger gibi araçlarla binary'yi inceleyerek şifre çözme pratiği yapabilir.
 
 *Feature 3*: Educational Design
 CrackMe provides a simple and clear platform for learning fundamental concepts in cybersecurity and cryptography.
+
 *Özellik 3*: Eğitimsel Amaçlı Tasarım
 Yeni başlayanlar için uygun, öğretici bir deneyim sunar ve karmaşık kavramları sade bir şekilde açıklar.
 
 *Feature 4*: Flexible Analysis Support
 The application supports various reverse engineering approaches (static and dynamic analysis), allowing users to experiment with different methods.
+
 *Özellik 4*: Esnek Analiz Desteği
 Kullanıcılar, statik kod analizi veya çalışma zamanı hata ayıklaması gibi farklı tekniklerle şifreyi çözmeyi keşfedebilir.
 
