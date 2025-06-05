@@ -79,11 +79,7 @@ See our plans in [ROADMAP.md](ROADMAP.md).
 
 ---
 
-Harika! Usage (Kullanım) bölümünü projenizin CrackMe yapısına uygun hale getirelim. Uygulamanızın argüman almadığını ve direkt olarak çalıştırıldığını düşünerek, bu bölümü daha açıklayıcı ve yönlendirici bir şekilde düzenleyelim.
-
-İşte size özel olarak hazırlanmış, güncellenmiş "Usage" bölümü:
-
-🎮 **Usage / Kullanım**
+## 🎮 **Usage / Kullanım**
 Hazır mısınız? Bu gizemli uygulamanın sırlarını çözmek için aşağıdaki adımları izleyin:
 
 **Projeyi başlatın**:
