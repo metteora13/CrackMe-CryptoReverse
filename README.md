@@ -1,43 +1,53 @@
 <div align="center">
-  <img src="https://img.shields.io/github/languages/count/keyvanarasteh/Project?style=flat-square&color=blueviolet" alt="Language Count">
-  <img src="https://img.shields.io/github/languages/top/keyvanarasteh/Project?style=flat-square&color=1e90ff" alt="Top Language">
-  <img src="https://img.shields.io/github/last-commit/keyvanarasteh/Project?style=flat-square&color=ff69b4" alt="Last Commit">
-  <img src="https://img.shields.io/github/license/keyvanarasteh/Project?style=flat-square&color=yellow" alt="License">
+  <img src="https://img.shields.io/github/languages/count/metteora13/CrackMe-CryptoReverse?style=flat-square&color=blueviolet" alt="Language Count">
+  <img src="https://img.shields.io/github/languages/top/metteora13/CrackMe-CryptoReverse?style=flat-square&color=1e90ff" alt="Top Language">
+  <img src="https://img.shields.io/github/last-commit/metteora13/CrackMe-CryptoReverse?style=flat-square&color=ff69b4" alt="Last Commit">
+  <img src="https://img.shields.io/github/license/metteora13/CrackMe-CryptoReverse?style=flat-square&color=yellow" alt="License">
   <img src="https://img.shields.io/badge/Status-Active-green?style=flat-square" alt="Status">
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square" alt="Contributions">
 </div>
 
-# Project Name
-*Proje Adı*
+# CrackMe-CryptoReverse
+*CrackMe-CryptoReverse*
 
-A brief, engaging description of your project.  
-*Projenizin kısa ve ilgi çekici bir açıklaması.*
+*Bu proje, temel bir "CrackMe" uygulaması olarak tasarlanmıştır ve kullanıcıdan bir şifre talep eder. Şifre, program içinde XOR kriptografik tekniği kullanılarak gizlenmiştir. Projenin amacı, tersine mühendislik (reverse engineering) becerilerini sınamak ve siber güvenlik alanında eğitimsel bir örnek sunmaktır. Kullanıcılar, binary dosyasını analiz ederek doğru şifreyi bulmaya çalışır, bu süreçte temel kriptografik yöntemlerin nasıl çalıştığını ve tersine mühendislik tekniklerini öğrenir.*
+
+*This project is designed as a basic "CrackMe" application that prompts the user for a password. The password is hidden within the program using the XOR cryptographic technique. The goal is to test reverse engineering skills and provide an educational example in the field of cybersecurity. Users attempt to uncover the correct password by analyzing the binary, learning about basic cryptographic methods and reverse engineering techniques in the process.*
 
 ---
 
 ## Features / *Özellikler*
 
-- **Feature 1:** Description of the feature.  
-  *Özellik 1: Özelliğin açıklaması.*
-- **Feature 2:** Another cool thing it does.  
-  *Özellik 2: Yaptığı başka bir harika şey.*
-- **Feature 3:** One more for good measure.  
-  *Özellik 3: Ve bir tane daha.*
-- Add more as they develop.  
-  *Geliştikçe daha fazla ekleyin.*
+*Feature 1*: XOR Encryption
+The password is concealed using an XOR operation, requiring users to understand XOR logic to decipher it.
+*Özellik 1*: XOR Şifreleme
+Şifre, XOR işlemiyle gizlenmiş olup, kullanıcıların bu kriptografik yöntemi analiz ederek şifreyi ortaya çıkarmasını sağlar.
+
+*Feature 2*: Reverse Engineering Focused
+The application encourages users to analyze the binary file to find the password, offering an opportunity to learn the use of reverse engineering tools.
+*Özellik 2*: Tersine Mühendislik Odaklı
+Kullanıcılar, disassembler veya debugger gibi araçlarla binary'yi inceleyerek şifre çözme pratiği yapabilir.
+
+*Feature 3*: Educational Design
+CrackMe provides a simple and clear platform for learning fundamental concepts in cybersecurity and cryptography.
+*Özellik 3*: Eğitimsel Amaçlı Tasarım
+Yeni başlayanlar için uygun, öğretici bir deneyim sunar ve karmaşık kavramları sade bir şekilde açıklar.
+
+*Feature 4*: Flexible Analysis Support
+The application supports various reverse engineering approaches (static and dynamic analysis), allowing users to experiment with different methods.
+*Özellik 4*: Esnek Analiz Desteği
+Kullanıcılar, statik kod analizi veya çalışma zamanı hata ayıklaması gibi farklı tekniklerle şifreyi çözmeyi keşfedebilir.
+
+More features will be added as development progresses.
+Geliştikçe daha fazla özellik eklenecektir.
 
 ---
 
 ## Team / *Ekip*
 
-- **219*****031** - Name Surname: *Role or Contribution*  
-  *Ad Soyad: Rolü veya Katkısı*
-- **Another Member** - Name Surname: *Role or Contribution*  
-  *Ad Soyad: Rolü veya Katkısı*
-- Add more members as needed.  
-  *Gerektiğinde daha fazla üye ekleyin.*
+- **2320191004** - İlke Meryem EYBERCİOĞLU: *Project Managment*  
+  *İlke Meryem Eybercioğlu: Proje Yönetimi*
 
----
 
 ## Roadmap / *Yol Haritası*
 
@@ -124,9 +134,8 @@ Licensed under the [MIT License](LICENSE.md).
 ## Acknowledgements / *Teşekkürler* (Optional)
 
 Thanks to:  
-- Awesome Library: For enabling X.  
-- Inspiration Source.  
-- Special thanks to...  
+- Keyvan Arasteh (keyvan.arasteh@istinye.edu.tr)
+- Istinye University
 
 *Teşekkürler: Harika kütüphaneler ve ilham kaynakları için.*
 
@@ -134,10 +143,10 @@ Thanks to:
 
 ## Contact / *İletişim* (Optional)
 
-Project Maintainer: [Your Name/Org Name] - [your.email@example.com]  
+Project Maintainer: [İlke Meryem Eybercioğlu/ Istinye University] - [2320191004@stu.istinye.edu.tr]  
 Found a bug? Open an issue.  
 
-*Proje Sorumlusu: [Adınız/Kuruluş Adınız] - [e-posta.adresiniz@ornek.com]. Hata bulursanız bir sorun bildirin.*
+*Proje Sorumlusu: [İlke Meryem Eybercioğlu/ Istinye University] - [2320191004@stu.istinye.edu.tr]. Hata bulursanız bir sorun bildirin.*
 
 ---
 
