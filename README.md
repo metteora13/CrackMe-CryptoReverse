@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square" alt="Contributions">
 </div>
 
-🕵️‍♂️ **CrackMe-CryptoReverse: Şifre Avı Başlasın! / Embark on the Cipher Hunt!**
+## 🕵️‍♂️ **CRACKME-CRYPTOREVERSE: Şifre Avı Başlasın! / Embark on the Cipher Hunt!**
 
 *"CrackMe" uygulaması, siber güvenlik ve tersine mühendislik dünyasına adım atmak isteyenler için tasarlanmış heyecan verici bir meydan okuma sunuyor. Karşınıza, kullanıcı dostu Python Tkinter tabanlı şık bir grafik arayüz çıkacak ve göreviniz basit: "Doğru şifreyi girin!" Ancak sakın aldanmayın; şifre, uygulamanın derinliklerinde ustaca gizlenmiş durumda
 İşte tam da bu noktada tersine mühendislik yetenekleriniz devreye giriyor. Kod akışını incelemeniz ve nihayetinde gizli anahtarı ortaya çıkarmanız gerekecek. strings, Ghidra, IDA Free, x64dbg gibi popüler tersine mühendislik araçlarını kullanarak dijital dedektiflik becerilerinizi konuşturmaya hazır olun!*
@@ -18,7 +18,7 @@ This is precisely where your reverse engineering prowess comes into play. Your m
 
 ---
 
-##✨ **Features / Özellikler**
+## ✨ **Features / Özellikler**
 Sizi hem eğlendirecek hem de öğretecek dikkat çekici özellikler:
 
 🔒 **Çok Seviyeli Kripto Gizemleri (Multi-Level Crypto Puzzles)**: Basitten karmaşığa doğru ilerleyen 6 farklı şifreleme algoritmasıyla karşılaşın. Her seviye, farklı bir kriptografik bulmacayı çözmenizi gerektirecek. (Ters Çevirme, XOR, Sezar Şifrelemesi, MD5 Hash, Matematiksel Hesaplama, Karmaşık Kontrol Akışı gibi!)
