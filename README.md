@@ -18,35 +18,18 @@ This is precisely where your reverse engineering prowess comes into play. Your m
 
 ---
 
-## Features / *Özellikler*
+##✨ **Features / Özellikler**
+Sizi hem eğlendirecek hem de öğretecek dikkat çekici özellikler:
 
-**Feature 1**: XOR Encryption
-The password is concealed using an XOR operation, requiring users to understand XOR logic to decipher it.
+🔒 Çok Seviyeli Kripto Gizemleri (Multi-Level Crypto Puzzles): Basitten karmaşığa doğru ilerleyen 6 farklı şifreleme algoritmasıyla karşılaşın. Her seviye, farklı bir kriptografik bulmacayı çözmenizi gerektirecek. (Ters Çevirme, XOR, Sezar Şifrelemesi, MD5 Hash, Matematiksel Hesaplama, Karmaşık Kontrol Akışı gibi!)
 
-**Özellik 1**: XOR Şifreleme
-Şifre, XOR işlemiyle gizlenmiş olup, kullanıcıların bu kriptografik yöntemi analiz ederek şifreyi ortaya çıkarmasını sağlar.
+🧠 Tersine Mühendislik Laboratuvarı (Reverse Engineering Sandbox): Bu uygulama, strings, disassembler'lar (Ghidra, IDA Free) ve debugger'lar (x64dbg) gibi araçların nasıl kullanılacağını pratik bir şekilde öğrenmek için mükemmel bir ortam sunar. Kodun iç yüzünü keşfetmeye odaklanın!
 
-**Feature 2**: Reverse Engineering Focused
-The application encourages users to analyze the binary file to find the password, offering an opportunity to learn the use of reverse engineering tools.
+🎓 Eğitimsel ve Öğretici Tasarım (Educational & Instructive Design): CrackMe, siber güvenlik ve kriptografi alanındaki temel kavramları yeni başlayanlar için anlaşılır ve ilgi çekici bir platformda sunar. Karmaşık algoritmaların ardındaki mantığı çözerek hem bilgi hem de beceri kazanın.
 
-**Özellik 2**: Tersine Mühendislik Odaklı
-Kullanıcılar, disassembler veya debugger gibi araçlarla binary'yi inceleyerek şifre çözme pratiği yapabilir.
+🔄 Esnek Analiz Desteği (Flexible Analysis Support): Statik kod analizi (kodun kaynak dosyasına veya ikili dosya yapısına bakma) veya dinamik analiz (programı çalıştırırken hata ayıklama ve bellek durumunu izleme) gibi çeşitli tersine mühendislik yaklaşımlarını deneme özgürlüğüne sahipsiniz. Size uygun yöntemi seçin!
 
-**Feature 3**: Educational Design
-CrackMe provides a simple and clear platform for learning fundamental concepts in cybersecurity and cryptography.
-
-**Özellik 3**: Eğitimsel Amaçlı Tasarım
-Yeni başlayanlar için uygun, öğretici bir deneyim sunar ve karmaşık kavramları sade bir şekilde açıklar.
-
-**Feature 4**: Flexible Analysis Support
-The application supports various reverse engineering approaches (static and dynamic analysis), allowing users to experiment with different methods.
-
-**Özellik 4**: Esnek Analiz Desteği
-Kullanıcılar, statik kod analizi veya çalışma zamanı hata ayıklaması gibi farklı tekniklerle şifreyi çözmeyi keşfedebilir.
-
-More features will be added as development progresses.
-Geliştikçe daha fazla özellik eklenecektir.
-
+🚀 İlerlemeyi Kaydetme (Progress Saving): Çözdüğünüz seviyeler otomatik olarak kaydedilir, böylece kaldığınız yerden devam edebilirsiniz. Her seferinde baştan başlamak zorunda kalmazsınız.
 ---
 
 ## Team / *Ekip*
@@ -64,13 +47,15 @@ See our plans in [ROADMAP.md](ROADMAP.md).
 
 ## Research / *Araştırmalar*
 
-| Topic / *Başlık*        | Link                                    | Description / *Açıklama*                        |
-|-------------------------|-----------------------------------------|------------------------------------------------|
-| Aircrack Deep Dive      | [researchs/aircrack.md](researchs/aircrack.md) | In-depth analysis of Aircrack-ng suite. / *Aircrack-ng paketinin derinlemesine analizi.* |
-| Example Research Topic  | [researchs/your-research-file.md](researchs/your-research-file.md) | Brief overview of this research. / *Bu araştırmanın kısa bir özeti.* |
-| Add More Research       | *Link to your other research files*     | *Description of the research*                  |
+| Topic / *Başlık*          | Link                                          | Description / *Açıklama*                        |
+| :------------------------ | :-------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Python Binary Analizi** | [`researchs/python-binary-analysis.md`](researchs/python-binary-analysis.md) | PyInstaller ile paketlenmiş Python uygulamalarının ikili dosyalarının (`.exe`) tersine mühendislik araçlarıyla nasıl analiz edileceğine dair bir inceleme. |
+| **Obfuscation Teknikleri** | [`researchs/obfuscation-techniques.md`](researchs/obfuscation-techniques.md) | Kod gizleme (obfuscation) yöntemleri ve bu tekniklerin tersine mühendislik süreçlerini nasıl zorlaştırdığı üzerine bir genel bakış. |
+| **Temel Kriptografi Algoritmaları** | [`researchs/basic-crypto-algs.md`](researchs/basic-crypto-algs.md) | Sezar, XOR ve MD5 gibi uygulamada kullanılan temel kriptografik algoritmaların çalışma prensipleri ve zayıflıkları. |
+| **Debugger Kullanımı (x64dbg)** | [`researchs/x64dbg-usage.md`](researchs/x64dbg-usage.md) | Dinamik analiz için x64dbg hata ayıklayıcısının temel özellikleri ve uygulamanın çalışma zamanı davranışını incelemede kullanımı. |
+| **Statik Analiz Araçları (Ghidra/IDA Free)** | [`researchs/static-analysis-tools.md`](researchs/static-analysis-tools.md) | Ghidra ve IDA Free gibi statik analiz araçlarıyla ikili kodun nasıl parçalandığı, fonksiyon akışının nasıl çıkarıldığına dair bir inceleme. |
 
----
+
 
 ## Installation / *Kurulum*
 
@@ -93,26 +78,27 @@ See our plans in [ROADMAP.md](ROADMAP.md).
 
 ---
 
-## Usage / *Kullanım*
+Harika! Usage (Kullanım) bölümünü projenizin CrackMe yapısına uygun hale getirelim. Uygulamanızın argüman almadığını ve direkt olarak çalıştırıldığını düşünerek, bu bölümü daha açıklayıcı ve yönlendirici bir şekilde düzenleyelim.
 
-Run the project:  
-*Projeyi çalıştırın:*
+İşte size özel olarak hazırlanmış, güncellenmiş "Usage" bölümü:
 
-```bash
-python main.py --input your_file.pcap --output results.txt
-```
+🎮 Usage / Kullanım
+Hazır mısınız? Bu gizemli uygulamanın sırlarını çözmek için aşağıdaki adımları izleyin:
 
-**Steps**:  
-1. Prepare input data (*explain data needed*).  
-2. Run the script with arguments (*explain key arguments*).  
-3. Check output (*explain where to find results*).  
+Projeyi başlatın:
 
-*Adımlar*:  
-1. Giriş verilerini hazırlayın (*ne tür verilere ihtiyaç duyulduğunu açıklayın*).  
-2. Betiği argümanlarla çalıştırın (*önemli argümanları açıklayın*).  
-3. Çıktıyı kontrol edin (*sonuçları nerede bulacağınızı açıklayın*).
+Bash
+python main.py
 
----
+Adımlar:
+
+Uygulamayı Başlatın: Terminalinizde yukarıdaki komutu çalıştırın. Kısa bir süre sonra, Python Tkinter tabanlı şık bir grafik arayüzle karşılaşacaksınız. Bu, şifre avınızın başlangıç noktası olacak!
+
+Gizli Şifreyi Çözün: Uygulamanın ana ekranında "Çözülmesi Gereken" başlığı altında size verilen şifreli metni dikkatlice inceleyin. Aynı zamanda, "Algoritma" ve "Nasıl Çözülür" kısımlarındaki ipuçları ve detaylı rehber metinleri size yol gösterecek. Bu bilgiler, hangi kriptografik yöntemin kullanıldığını ve şifreyi nasıl deşifre etmeniz gerektiğini anlamanız için kritik. Gerekirse harici tersine mühendislik araçlarını kullanmaktan çekinmeyin!
+
+Çözümü Girin: Şifreli metnin ardındaki gerçek kelimeyi bulduğunuzda, bunu "Çözülmüş Şifreyi Girin" kutusuna yazın. Doğrulamak için klavyenizdeki Enter tuşuna basın veya "ÇÖZÜMÜ KONTROL ET" butonuna tıklayın.
+
+İlerlemenizi İzleyin: Eğer çözümünüz doğruysa, "BAŞARILI!" mesajını görecek ve bir sonraki zorlu seviyeye geçeceksiniz. Tüm 6 seviyeyi başarıyla tamamlayarak R.E.M.I.X. görevinizi bitirin ve siber güvenlik alanındaki ustalığınızı kanıtlayın!
 
 ## Contributing / *Katkıda Bulunma*
 
