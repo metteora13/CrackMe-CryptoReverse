@@ -30,6 +30,7 @@ Sizi hem eğlendirecek hem de öğretecek dikkat çekici özellikler:
 🔄 **Esnek Analiz Desteği (Flexible Analysis Support)**: Statik kod analizi (kodun kaynak dosyasına veya ikili dosya yapısına bakma) veya dinamik analiz (programı çalıştırırken hata ayıklama ve bellek durumunu izleme) gibi çeşitli tersine mühendislik yaklaşımlarını deneme özgürlüğüne sahipsiniz. Size uygun yöntemi seçin!
 
 🚀 **İlerlemeyi Kaydetme (Progress Saving)**: Çözdüğünüz seviyeler otomatik olarak kaydedilir, böylece kaldığınız yerden devam edebilirsiniz. Her seferinde baştan başlamak zorunda kalmazsınız.
+
 ---
 
 ## Team / *Ekip*
