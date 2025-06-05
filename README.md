@@ -10,9 +10,9 @@
 # CrackMe-CryptoReverse
 *CrackMe-CryptoReverse*
 
-*Bu proje, temel bir "CrackMe" uygulaması olarak tasarlanmıştır ve kullanıcıdan bir şifre talep eder. Şifre, program içinde XOR kriptografik tekniği kullanılarak gizlenmiştir. Projenin amacı, tersine mühendislik (reverse engineering) becerilerini sınamak ve siber güvenlik alanında eğitimsel bir örnek sunmaktır. Kullanıcılar, binary dosyasını analiz ederek doğru şifreyi bulmaya çalışır, bu süreçte temel kriptografik yöntemlerin nasıl çalıştığını ve tersine mühendislik tekniklerini öğrenir.*
+*Bu "CrackMe" uygulaması, kullanıcı dostu basit bir arayüze (Python Tkinter tabanlı grafiksel veya terminal arayüzü) sahiptir. Karşınıza "Doğru şifreyi girin" ekranı çıkacak ve göreviniz, uygulamanın derinliklerinde saklı olan gizli şifreyi ortaya çıkarmak olacak. Ancak unutmayın, şifre doğrudan metin olarak yazılımın içinde bulunmuyor! İşte burada tersine mühendislik yetenekleriniz devreye giriyor. Kullanıcılar, strings, Ghidra, IDA Free, x64dbg gibi popüler tersine mühendislik araçlarını kullanarak programın ikili (binary) dosyasını analiz etmek, kod akışını incelemek ve şifreyi bulmak zorunda kalacak.*
 
-*This project is designed as a basic "CrackMe" application that prompts the user for a password. The password is hidden within the program using the XOR cryptographic technique. The goal is to test reverse engineering skills and provide an educational example in the field of cybersecurity. Users attempt to uncover the correct password by analyzing the binary, learning about basic cryptographic methods and reverse engineering techniques in the process.*
+*This "CrackMe" application features a user-friendly, simple interface (either a Python Tkinter-based graphical interface or a terminal interface). You will encounter a "Enter the correct password" screen, and your task is to uncover the hidden password concealed deep within the application. However, keep in mind that the password is not directly stored as plain text within the software! This is where your reverse engineering skills come into play. Users will need to analyze the program's binary file, examine the code flow, and find the password using popular reverse engineering tools such as strings, Ghidra, IDA Free, or x64dbg.*
 
 ---
 
